@@ -281,7 +281,211 @@ class ex extends JDialog{
 		jl17.setBounds(700,410,80,20);
 		jl18.setBounds(800,360,80,20);
 		JButton shanchutijiao = new JButton("提交");
-
+		shanchutijiao.setBounds(800, 430, 80, 30);
+		shanchuliebiao.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				if(e.getStateChange()==1){
+					backgrounde.remove(jt11);
+					backgrounde.remove(jt12);
+					backgrounde.remove(jt13);
+					backgrounde.remove(jt14);
+					backgrounde.remove(jt15);
+					backgrounde.remove(jt16);
+					backgrounde.remove(jt17);
+					backgrounde.remove(jt18);
+					backgrounde.remove(jl12);
+					backgrounde.remove(jl13);
+					backgrounde.remove(jl14);
+					backgrounde.remove(jl15);
+					backgrounde.remove(jl16);
+					backgrounde.remove(jl17);
+					backgrounde.remove(jl18);
+					backgrounde.remove(jl11);
+					
+					jt11.setText("");
+					jt12.setText("");
+					jt13.setText("");
+					jt14.setText("");
+					jt15.setText("");
+					jt16.setText("");
+					jt17.setText("");
+					jt18.setText("");
+					jl11.setText("");
+					jl12.setText("");
+					jl13.setText("");
+					jl14.setText("");
+					jl15.setText("");
+					jl16.setText("");
+					jl17.setText("");
+					jl18.setText("");
+					backgrounde.add(shanchutijiao);
+					
+						jl11.setText("学号");
+						backgrounde.add(jl11);
+						backgrounde.add(jt11);
+						backgrounde.repaint();
+					
+				}
+			}
+		});
+		shanchutijiao.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				System.out.println(shanchuliebiao.getSelectedItem());
+				
+					String a0=jt11.getText()+",";
+					String[] a=a0.split(",");
+					try {
+						makeDelete(a);
+					} catch (SQLException e1) {
+						// TODO 自动生成的 catch 块
+						e1.printStackTrace();
+					}
+					/*jt11.getText()商号*/
+					
+					
+					String[][] changshangshuju =getTable();
+					
+					changshangmodel.setDataVector(changshangshuju, changshangtou);
+					changshangbiao.repaint();
+				
+			}
+		});
+		shanchu.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				backgrounde.remove(xiugaitijiao);
+				backgrounde.remove(xiugailiebiao);
+				backgrounde.remove(jt12);
+				backgrounde.remove(jt13);
+				backgrounde.remove(jt14);
+				backgrounde.remove(jt15);
+				backgrounde.remove(jt16);
+				backgrounde.remove(jt17);
+				backgrounde.remove(jt18);
+				backgrounde.remove(jl12);
+				backgrounde.remove(jl13);
+				backgrounde.remove(jl14);
+				backgrounde.remove(jl15);
+				backgrounde.remove(jl16);
+				backgrounde.remove(jl17);
+				backgrounde.remove(jl18);
+				backgrounde.remove(jt21);
+				backgrounde.remove(jt22);
+				backgrounde.remove(jt23);
+				backgrounde.remove(jt24);
+				backgrounde.remove(jt25);
+				backgrounde.remove(jt26);
+				backgrounde.remove(jt27);
+				backgrounde.remove(jt28);
+				backgrounde.remove(jl21);
+				backgrounde.remove(jl22);
+				backgrounde.remove(jl23);
+				backgrounde.remove(jl24);
+				backgrounde.remove(jl25);
+				backgrounde.remove(jl26);
+				backgrounde.remove(jl27);
+				backgrounde.remove(jl28);
+				backgrounde.remove(chazhaotijiao);
+				backgrounde.remove(chazhaoliebiao);
+				backgrounde.remove(tianjialiebiao);
+				backgrounde.remove(jl8);
+				backgrounde.remove(jl7);
+				backgrounde.remove(jl6);
+				backgrounde.remove(jl5);
+				backgrounde.remove(jl4);
+				backgrounde.remove(jl3);
+				backgrounde.remove(jl2);
+				backgrounde.remove(jl1);
+				backgrounde.remove(jt1);
+				backgrounde.remove(jt2);
+				backgrounde.remove(jt3);
+				backgrounde.remove(jt4);
+				backgrounde.remove(jt5);
+				backgrounde.remove(jt6);
+				backgrounde.remove(jt7);
+				backgrounde.remove(jt8);
+				backgrounde.remove(tijiaotianjia);
+				jl11.setText("学号");
+				backgrounde.add(shanchuliebiao);
+				backgrounde.add(jl11);
+				backgrounde.add(jt11);
+				backgrounde.add(shanchutijiao);
+				backgrounde.repaint();
+			}
+		});
+		backgrounde.add(shanchu);
+		tianjia.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				backgrounde.add(tianjialiebiao);
+				backgrounde.repaint();
+				tianjialiebiao.setSelectedItem("同学");
+				jl1.setText("学号");
+				jl2.setText("姓名");
+				jl3.setText("家庭住址");
+				jl4.setText("电话");
+				jl5.setText("微信");
+				jl6.setText("邮箱");
+				jl7.setText("QQ");
+				jl8.setText("个性语言");
+				backgrounde.remove(xiugaitijiao);
+				backgrounde.remove(xiugailiebiao);
+				backgrounde.remove(jt21);
+				backgrounde.remove(jt22);
+				backgrounde.remove(jt23);
+				backgrounde.remove(jt24);
+				backgrounde.remove(jt25);
+				backgrounde.remove(jt26);
+				backgrounde.remove(jt27);
+				backgrounde.remove(jt28);
+				backgrounde.remove(jl21);
+				backgrounde.remove(jl22);
+				backgrounde.remove(jl23);
+				backgrounde.remove(jl24);
+				backgrounde.remove(jl25);
+				backgrounde.remove(jl26);
+				backgrounde.remove(jl27);
+				backgrounde.remove(jl28);
+				backgrounde.remove(chazhaotijiao);
+				backgrounde.remove(chazhaoliebiao);
+				backgrounde.remove(jt11);
+				backgrounde.remove(jt12);
+				backgrounde.remove(jt13);
+				backgrounde.remove(jt14);
+				backgrounde.remove(jt15);
+				backgrounde.remove(jt16);
+				backgrounde.remove(jt17);
+				backgrounde.remove(jt18);
+				backgrounde.remove(jl11);
+				backgrounde.remove(jl12);
+				backgrounde.remove(jl13);
+				backgrounde.remove(jl14);
+				backgrounde.remove(jl15);
+				backgrounde.remove(jl16);
+				backgrounde.remove(jl17);
+				backgrounde.remove(jl18);
+				backgrounde.remove(shanchutijiao);
+				backgrounde.remove(shanchuliebiao);
+				backgrounde.remove(jl6);
+				backgrounde.remove(jt6);
+				backgrounde.add(tijiaotianjia);
+				backgrounde.add(jl1);
+				backgrounde.add(jl2);
+				backgrounde.add(jl3);
+				backgrounde.add(jl4);
+				backgrounde.add(jt1);
+				backgrounde.add(jt2);
+				backgrounde.add(jt3);
+				backgrounde.add(jt4);
+				backgrounde.add(jt5);
+				backgrounde.add(jl5);
+				backgrounde.add(jt6);
+				backgrounde.add(jl6);
+				backgrounde.add(jt7);
+				backgrounde.add(jl7);
+				backgrounde.add(jt8);
+				backgrounde.add(jl8);
+				backgrounde.repaint();
+			}
+		});
 		
 		setTitle("管理员模式");
 		backgrounde.add(tianjia);
