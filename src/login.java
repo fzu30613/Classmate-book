@@ -487,9 +487,369 @@ class ex extends JDialog{
 			}
 		});
 		
+		//查找
+		backgrounde.add(chazhao);
+		chazhaotijiao.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				
+					String[] a={jt21.getText(),jt22.getText(),jt23.getText(),jt24.getText(),jt25.getText(),jt26.getText(),jt27.getText(),jt28.getText()};
+					/*jt21.getText()商号2厂名3地址4联系方式5备注*/
+					String[] str = {"学号","姓名","家庭住址","电话","微信","邮箱","QQ","个性语言"};
+					
+					
+					String[][] str1 =makeSelect(a);///////查找提交
+					
+					new chaxunjieguo(str,str1).setVisible(true);
+				
+			}
+		});
+		chazhao.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				jl21.setText("学号");
+				jl22.setText("姓名");
+				jl23.setText("家庭住址");
+				jl24.setText("电话");
+				jl25.setText("微信");
+				jl26.setText("邮箱");
+				jl27.setText("QQ");
+				jl28.setText("个性语言");
+				backgrounde.remove(xiugaitijiao);
+				backgrounde.remove(xiugailiebiao);
+				backgrounde.add(jl21);
+				backgrounde.add(jl22);
+				backgrounde.add(jl23);
+				backgrounde.add(jl24);
+				backgrounde.add(jl25);
+				backgrounde.add(jl26);
+				backgrounde.add(jl27);
+				backgrounde.add(jl28);
+				backgrounde.add(jt21);
+				backgrounde.add(jt22);
+				backgrounde.add(jt23);
+				backgrounde.add(jt24);
+				backgrounde.add(jt25);
+				backgrounde.add(jt26);
+				backgrounde.add(jt27);
+				backgrounde.add(jt28);
+				backgrounde.add(chazhaotijiao);
+				backgrounde.add(chazhaoliebiao);
+				backgrounde.remove(tianjialiebiao);
+				backgrounde.remove(jl1);
+				backgrounde.remove(jl2);
+				backgrounde.remove(jl3);
+				backgrounde.remove(jl4);
+				backgrounde.remove(jl5);
+				backgrounde.remove(jl6);
+				backgrounde.remove(jl7);
+				backgrounde.remove(jl8);
+				backgrounde.remove(tijiaotianjia);
+				backgrounde.remove(jt1);
+				backgrounde.remove(jt2);
+				backgrounde.remove(jt3);
+				backgrounde.remove(jt4);
+				backgrounde.remove(jt5);
+				backgrounde.remove(jt6);
+				backgrounde.remove(jt7);
+				backgrounde.remove(jt8);
+				backgrounde.remove(jt11);
+				backgrounde.remove(jt12);
+				backgrounde.remove(jt13);
+				backgrounde.remove(jt14);
+				backgrounde.remove(jt15);
+				backgrounde.remove(jt16);
+				backgrounde.remove(jt17);
+				backgrounde.remove(jt18);
+				backgrounde.remove(jl11);
+				backgrounde.remove(jl12);
+				backgrounde.remove(jl13);
+				backgrounde.remove(jl14);
+				backgrounde.remove(jl15);
+				backgrounde.remove(jl16);
+				backgrounde.remove(jl17);
+				backgrounde.remove(jl18);
+				backgrounde.remove(shanchuliebiao);
+				backgrounde.remove(shanchutijiao);
+				backgrounde.repaint();
+			}
+		});
+		chazhaoliebiao.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				if(e.getStateChange()==1){
+					backgrounde.remove(jt21);
+					backgrounde.remove(jt22);
+					backgrounde.remove(jt23);
+					backgrounde.remove(jt24);
+					backgrounde.remove(jt25);
+					backgrounde.remove(jt26);
+					backgrounde.remove(jt27);
+					backgrounde.remove(jt28);
+					backgrounde.remove(jl21);
+					backgrounde.remove(jl22);
+					backgrounde.remove(jl23);
+					backgrounde.remove(jl24);
+					backgrounde.remove(jl25);
+					backgrounde.remove(jl26);
+					backgrounde.remove(jl27);
+					backgrounde.remove(jl28);
+					backgrounde.remove(chazhaotijiao);
+					jt21.setText("");
+					jt22.setText("");
+					jt23.setText("");
+					jt24.setText("");
+					jt25.setText("");
+					jt26.setText("");
+					jt27.setText("");
+					jt28.setText("");
+					jl21.setText("学号");
+					jl22.setText("姓名");
+					jl23.setText("家庭住址");
+					jl24.setText("电话");
+					jl25.setText("微信");
+					jl26.setText("邮箱");
+					jl27.setText("QQ");
+					jl28.setText("个性语言");
+						backgrounde.add(jl21);
+						backgrounde.add(jl22);
+						backgrounde.add(jl23);
+						backgrounde.add(jl24);
+						backgrounde.add(jl25);
+						backgrounde.add(jl26);
+						backgrounde.add(jl27);
+						backgrounde.add(jl28);
+						backgrounde.add(jt21);
+						backgrounde.add(jt22);
+						backgrounde.add(jt23);
+						backgrounde.add(jt24);
+						backgrounde.add(jt25);
+						backgrounde.add(jt26);
+						backgrounde.add(jt27);
+						backgrounde.add(jt28);
+						backgrounde.add(chazhaotijiao);
+						backgrounde.repaint();
+					
+				}
+			}
+		});
+		
+		
+		backgrounde.add(xiugai);
+		xiugaitijiao.setBounds(700, 400, 80, 30);
+		xiugai.setBounds(950,30,80,30);
+		
+		xiugailiebiao.addItem("同学");
+		xiugailiebiao.setBounds(700, 100, 80, 30);
+		xiugailiebiao.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				if(e.getStateChange()==1){
+					backgrounde.remove(jt21);
+					backgrounde.remove(jt22);
+					backgrounde.remove(jt23);
+					backgrounde.remove(jt24);
+					backgrounde.remove(jt25);
+					backgrounde.remove(jt26);
+					backgrounde.remove(jt27);
+					backgrounde.remove(jt28);
+					backgrounde.remove(jl22);
+					backgrounde.remove(jl23);
+					backgrounde.remove(jl24);
+					backgrounde.remove(jl25);
+					backgrounde.remove(jl26);
+					backgrounde.remove(jl27);
+					backgrounde.remove(jl28);
+					jt21.setText("");
+					jt22.setText("");
+					jt23.setText("");
+					jt24.setText("");
+					jt25.setText("");
+					jt26.setText("");
+					jt27.setText("");
+					jt28.setText("");
+					backgrounde.remove(jt1);
+					backgrounde.remove(jt2);
+					backgrounde.remove(jt3);
+					backgrounde.remove(jt4);
+					backgrounde.remove(jt5);
+					backgrounde.remove(jt6);
+					backgrounde.remove(jt7);
+					backgrounde.remove(jt8);
+					backgrounde.remove(jl1);
+					backgrounde.remove(jl2);
+					backgrounde.remove(jl3);
+					backgrounde.remove(jl4);
+					backgrounde.remove(jl5);
+					backgrounde.remove(jl6);
+					backgrounde.remove(jl7);
+					backgrounde.remove(jl8);
+					jl1.setText("");
+					jl2.setText("");
+					jl3.setText("");
+					jl4.setText("");
+					jl5.setText("");
+					jl6.setText("");
+					jl7.setText("");
+					jl8.setText("");
+					jt1.setText("");
+					jt2.setText("");
+					jt3.setText("");
+					jt4.setText("");
+					jt5.setText("");
+					jt6.setText("");
+					jt7.setText("");
+					jt8.setText("");
+						jl21.setText("学号");
+						jl22.setText("姓名");
+						jl23.setText("家庭住址");
+						jl24.setText("电话");
+						jl25.setText("微信");
+						jl26.setText("邮箱");
+						jl27.setText("QQ");
+						jl28.setText("个性语言");
+						backgrounde.add(jl21);
+						backgrounde.add(jl22);
+						backgrounde.add(jl23);
+						backgrounde.add(jl24);
+						backgrounde.add(jl25);
+						backgrounde.add(jl26);
+						backgrounde.add(jl27);
+						backgrounde.add(jl28);
+						backgrounde.add(jt21);
+						backgrounde.add(jt22);
+						backgrounde.add(jt23);
+						backgrounde.add(jt24);
+						backgrounde.add(jt25);
+						backgrounde.add(jt26);
+						backgrounde.add(jt27);
+						backgrounde.add(jt28);
+						jl1.setText("学号");
+						jl2.setText("姓名");
+						jl3.setText("家庭住址");
+						jl4.setText("电话");
+						jl5.setText("微信");
+						jl6.setText("邮箱");
+						jl7.setText("QQ");
+						jl8.setText("个性语言");
+						backgrounde.add(jl1);
+						backgrounde.add(jl2);
+						backgrounde.add(jl3);
+						backgrounde.add(jl4);
+						backgrounde.add(jl5);
+						backgrounde.add(jl6);
+						backgrounde.add(jl7);
+						backgrounde.add(jl8);
+						backgrounde.add(jt1);
+						backgrounde.add(jt2);
+						backgrounde.add(jt3);
+						backgrounde.add(jt4);
+						backgrounde.add(jt5);
+						backgrounde.add(jt6);
+						backgrounde.add(jt7);
+						backgrounde.add(jt8);
+						backgrounde.repaint();
+				}
+			}
+		});
+		xiugai.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				backgrounde.add(xiugailiebiao);
+				jl21.setText("学号");
+				jl22.setText("姓名");
+				jl23.setText("家庭住址");
+				jl24.setText("电话");
+				jl25.setText("微信");
+				jl26.setText("邮箱");
+				jl27.setText("QQ");
+				jl28.setText("个性语言");
+				jl1.setText("学号");
+				jl2.setText("姓名");
+				jl3.setText("家庭住址");
+				jl4.setText("电话");
+				jl5.setText("微信");
+				jl6.setText("邮箱");
+				jl7.setText("QQ");
+				jl8.setText("个性语言");
+				backgrounde.add(jl21);
+				backgrounde.add(jl22);
+				backgrounde.add(jl23);
+				backgrounde.add(jl24);
+				backgrounde.add(jl25);
+				backgrounde.add(jl26);
+				backgrounde.add(jl27);
+				backgrounde.add(jl28);
+				backgrounde.add(jt21);
+				backgrounde.add(jt22);
+				backgrounde.add(jt23);
+				backgrounde.add(jt24);
+				backgrounde.add(jt25);
+				backgrounde.add(jt26);
+				backgrounde.add(jt27);
+				backgrounde.add(jt28);
+				backgrounde.remove(chazhaotijiao);
+				backgrounde.remove(tianjialiebiao);
+				backgrounde.remove(chazhaoliebiao);
+				backgrounde.repaint();
+				
+				backgrounde.add(jl1);
+				backgrounde.add(jl2);
+				backgrounde.add(jl3);
+				backgrounde.add(jl4);
+				backgrounde.add(jl5);
+				backgrounde.add(jl6);
+				backgrounde.add(jl7);
+				backgrounde.add(jl8);
+				backgrounde.add(jt1);
+				backgrounde.add(jt2);
+				backgrounde.add(jt3);
+				backgrounde.add(jt4);
+				backgrounde.add(jt5);
+				backgrounde.add(jt6);
+				backgrounde.add(jt7);
+				backgrounde.add(jt8);
+				backgrounde.remove(tijiaotianjia);
+				backgrounde.remove(chazhaotijiao);
+				backgrounde.remove(jl11);
+				backgrounde.remove(jl12);
+				backgrounde.remove(jl13);
+				backgrounde.remove(jt11);
+				backgrounde.remove(jt12);
+				backgrounde.remove(jt13);
+				backgrounde.remove(shanchuliebiao);
+				backgrounde.remove(shanchutijiao);
+				backgrounde.add(xiugaitijiao);
+				backgrounde.repaint();
+			}
+		});
+		xiugaitijiao.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				String i = "";
+				if(jt21.getText()==i&&jt22.getText()==i&&jt23.getText()==i&&jt24.getText()==i&&jt25.getText()==i&&jt26.getText()==i&&jt27.getText()==i&&jt28.getText()==i);
+				else{
+						String[] a1={jt21.getText(),jt22.getText(),jt23.getText(),jt24.getText(),jt25.getText(),jt26.getText(),jt27.getText(),jt28.getText()};
+						String[] a={jt1.getText(),jt2.getText(),jt3.getText(),jt4.getText(),jt5.getText(),jt6.getText(),jt7.getText(),jt8.getText()};
+						
+						/*String格式 jt1.getText()为商号，···2.···厂名，3 地址 4 联系方式5备注*/
+						
+						try {
+							makeUpDate(a,a1);
+						} catch (SQLException e1) {
+							// TODO 自动生成的 catch 块
+							e1.printStackTrace();
+						}
+						String[][] changshangshuju = getTable();
+						
+						
+						changshangmodel.setDataVector(changshangshuju, changshangtou);
+						changshangbiao.repaint();
+					
+				}
+				
+			}
+		});
 		setTitle("管理员模式");
 		backgrounde.add(tianjia);
 		setSize(1100,619);
 	}
 
 }
+
+
+
